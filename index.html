@@ -10,7 +10,7 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -18,41 +18,58 @@
             font-family: 'Archivo', system-ui, sans-serif;
             color: white;
             text-align: center;
+            padding: 20px;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
+            max-width: 420px;
         }
 
         .title {
-            font-size: 3.2rem;
+            font-size: 2.6rem;
             font-weight: 700;
             letter-spacing: 0.06em;
             margin-bottom: 4.5rem;
             text-transform: uppercase;
+            line-height: 1.1;
         }
 
         .link-list {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 2.2rem;
+            width: 100%;
         }
 
         .link {
-            font-size: 1.45rem;
+            font-size: 2.6rem;
             font-weight: 700;
             letter-spacing: 0.04em;
             text-transform: uppercase;
             color: white;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            padding: 6px 0;
         }
 
         .link:hover {
-            color: #ffcc00;
-            letter-spacing: 0.12em;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            text-decoration-thickness: 2px;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 480px) {
+            .title {
+                margin-bottom: 3.8rem;
+            }
+            .link-list {
+                gap: 1.9rem;
+            }
         }
     </style>
 </head>
